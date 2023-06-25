@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import Lottie from "lottie-react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.title}>Olá, este é o React Native!</Text>
+      <Lottie
+        source={require("./assets/lottie-react-native.json")}
+        autoPlay
+        loop
+        style={styles.animation}
+      />
     </View>
   );
 }
@@ -13,8 +18,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#67159C",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "white",
+  },
+  animation: {
+    height: 200,
+    width: 200,
   },
 });
